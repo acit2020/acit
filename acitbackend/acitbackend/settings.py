@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,6 +26,15 @@ SECRET_KEY = 'django-insecure-n+*!gt@1cg6gd4c@=56^6i+h=j_bgmpkd60!b==pd)tc@41p%k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media")
+
+STATIC_URL="/static/"
+STATIC_ROOT=os.path.join(BASE_DIR,"static")
+
+TAMPLATES_URL="/teamplates/"
+TAMPLATES_ROOT=os.path.join(BASE_DIR,"templates")
+
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'acitapp',
 ]
 
 MIDDLEWARE = [
